@@ -3,6 +3,13 @@ Project of the discipline of Advanced Topics in Internet Systems of the Universi
 
 ## How to run
 1. Clone the Project
-2. Run the `npm update` on terminal inside the project directory
+2. In the project directory, run the following commands:
+
+`npm install`
+
+`npm i ionic-angular`
+
+`npm i ionic-storage`
+
 3. Run `ionic serve` to open the app on the browser.
 
