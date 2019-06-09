@@ -2,7 +2,7 @@ ion-content {
 	// --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
   // --background: #fff url('../../assets/background1.png') no-repeat center center / cover !important;
   // --background: #fff url('../../assets/fala-universidades-netflix-3.jpg') no-repeat center center / cover !important;
-  --background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('../../assets/Netflix-Background.jpg') no-repeat center center / cover !important;
+  --background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url('../../assets/Netflix-Background.jpg') no-repeat center center / cover !important;
 }
 .delay-2 {
 animation-delay: .5s;
@@ -14,5 +14,5 @@ animation-delay: .17s;
 animation-delay: .9s;
 }
 .homeText{
-	color:#bdb8b8;
+	color:#2c2b2b;
 }

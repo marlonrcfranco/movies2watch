@@ -45,7 +45,7 @@ export class EmcartazPage implements OnInit {
 
   /**
    * CONSTRUTOR DA PÁGINA DE FILMES
-   * @param movieService Lida com o moviedb.service que é o nosso connector da API 
+   * @param movieService Lida com o moviedb.service que é o noss connector da API 
    */
   constructor(private movieService: MoviedbService, private router: Router) { }
  

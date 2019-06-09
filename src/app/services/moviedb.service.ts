@@ -12,33 +12,31 @@ import { Movie } from "../models/movie";
 })
 
 export class MoviedbService {
- 	url = 'https://api.themoviedb.org/3/'; //URL para chamadas da api
-  apiKey = '6dea98b38f765ad962359956d3867301'; //Key de acesso a API
+ 	url = 'https://api.themoviedb.org/3/';
+  apiKey = '6dea98b38f765ad962359956d3867301';
  
-  /**
-   * @param http Parametro padrão para realizar requisições HTTP
-   * https://api.themoviedb.org/3/collection/10?api_key=6dea98b38f765ad962359956d3867301'
-   */
   constructor(private http: HttpClient) { }
 
   getAllMoviesByGenres(id_genero: number) {
 	  return new Promise(resolve => {
-	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres='+id_genero)
+	    this.http.get(this.url+'discover/movie?api_key=8ea851d4024207756b150bd91a795d24&with_genres='+id_genero)
 	    .subscribe(data => {
 	      resolve(data);
 	    }, err => {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
 	getMovieCast(movieID: any): Observable<Cast[]> {
-	  return this.http.get(this.url+"movie/"+movieID+"/credits?api_key="+this.apiKey).pipe(
+	  return this.http.get(this.url+'movie/'+movieID+'/credits?api_key='+this.apiKey).pipe(
       map((response: CastResponse) => {
         console.log(response);
         return response.cast;
       })
     );
-  }
+	}
+	
   getActionMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=28&page='+page)
@@ -48,7 +46,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getAdventureMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=12&page='+page)
@@ -58,7 +57,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getAnimationMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=16&page='+page)
@@ -68,7 +68,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getComediaMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=35&page='+page)
@@ -78,7 +79,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getCrimeMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=80&page='+page)
@@ -88,7 +90,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getDocMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=99&page='+page)
@@ -98,7 +101,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getDramaMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=18&page='+page)
@@ -108,7 +112,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getFamilyMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=10751&page='+page)
@@ -118,7 +123,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getFantasyMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=14&page='+page)
@@ -128,7 +134,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getHistoryMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=36&page='+page)
@@ -138,7 +145,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getTerrorMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=27&page='+page)
@@ -148,7 +156,8 @@ export class MoviedbService {
 	      console.log(err);
 	    });
 	  });
-  }
+	}
+	
   getMusicMovies(page: any) {
 	  return new Promise(resolve => {
 	    this.http.get(this.url+'discover/movie?api_key='+this.apiKey+'&with_genres=10402&page='+page)
@@ -231,7 +240,7 @@ export class MoviedbService {
 	}
 	
 	getMovieDetail(movieID: string): Observable<Movie> {
-    return this.http.get(this.url+"movie/"+movieID+"?api_key="+this.apiKey+"&language=en").pipe(
+    return this.http.get(this.url+'movie/'+movieID+'?api_key='+this.apiKey+'&language=en').pipe(
       map((response: Movie) => {
         return response;
       })
