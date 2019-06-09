@@ -9,13 +9,14 @@ import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
 
-  let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy;
+  let statusBarSpy, splashScreenSpy, platformReadySpy, platformIsSpy, platformSpy;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     statusBarSpy = jasmine.createSpyObj('StatusBar', ['styleDefault']);
     splashScreenSpy = jasmine.createSpyObj('SplashScreen', ['hide']);
     platformReadySpy = Promise.resolve();
-    platformSpy = jasmine.createSpyObj('Platform', { ready: platformReadySpy });
+    platformIsSpy = Promise.ready();
+    platformSpy = jasmine.createSpyObj('Platform', { ready: platformReadySpy, is: platformIsSpy });
 
     TestBed.configureTestingModule({
       declarations: [AppComponent],
@@ -26,9 +27,9 @@ describe('AppComponent', () => {
         { provide: Platform, useValue: platformSpy },
       ],
     }).compileComponents();
-  }));
+  });
 
-  it('should create the app', () => {
+  it('should create the app', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();

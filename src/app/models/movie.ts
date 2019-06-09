@@ -1,43 +1,35 @@
-import { Genre } from "./genre";
-
-export interface MovieResponse {
-  page: number;
-  results: Movie[];
-  total_results: number;
-  total_pages: number;
-}
-
 export interface Movie {
-  adult: boolean;
-  backdrop_path: string;
-  belongs_to_collection: any;
-  budget: number;
-  genres: Genre;
-  homepage: string;
   id: number;
-  imdb_id: string;
+  title: string;
+  overview: string;
+  release_date: string;
+  vote_count: number;
+  vote_average: number;
+  poster_path: string;
+  backdrop_path: string;
   original_language: string;
   original_title: string;
-  overview: string;
   popularity: number;
-  poster_path: string;
-  production_companies: any;
-  production_countries: any;
-  release_date: string;
-  revenue: number;
-  runtime: number;
-  spoken_languages: any;
-  status: string;
-  tagline: string;
-  title: string;
+  adult: boolean;
   video: boolean;
-  vote_average: number;
-  vote_count: number;
+  // detail
+  runtime?: number;
+  budget?: number;
+  production_companies?: {
+    id: number;
+    logo_path: string;
+    name: string;
+    origin_country: string;
+  }[];
+  genres?: {
+    id: number;
+    name: string;
+  }[];
+  credits?: {
+    cast?: {
+      name?: string,
+      profile_path?: string,
+      character?: string
+    }[];
+  };
 }
-
-export interface MovieStates {
-  favorite: boolean,
-  id: Number,
-  rated: any,
-  watchlist: boolean
-} 

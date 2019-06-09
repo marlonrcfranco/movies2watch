@@ -1,0 +1,121 @@
+{
+  "_args": [
+    [
+      "cordova-fabric-plugin@1.1.14-dev",
+      "/home/marlonrcfranco/Desktop/TASI/movies-app"
+    ]
+  ],
+  "_from": "cordova-fabric-plugin@1.1.14-dev",
+  "_id": "cordova-fabric-plugin@1.1.14-dev",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-fabric-plugin",
+  "_nodeVersion": "8.9.4",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-fabric-plugin_1.1.14-dev_1521685371694_0.5652164192488793"
+  },
+  "_npmUser": {
+    "email": "agustin478@gmail.com",
+    "name": "sarriaroman"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "cordova-fabric-plugin",
+    "raw": "cordova-fabric-plugin@1.1.14-dev",
+    "rawSpec": "1.1.14-dev",
+    "scope": null,
+    "spec": "1.1.14-dev",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-fabric-plugin/-/cordova-fabric-plugin-1.1.14-dev.tgz",
+  "_shasum": "be481c2d81269c05300b130d496fe4f1e10f7faf",
+  "_shrinkwrap": null,
+  "_spec": "cordova-fabric-plugin@1.1.14-dev",
+  "_where": "/home/marlonrcfranco/Desktop/TASI/movies-app",
+  "author": {
+    "name": "Roman A. Sarria"
+  },
+  "bugs": {
+    "url": "https://github.com/sarriaroman/FabricPlugin/issues"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/FabricPlugin"
+  },
+  "contributors": [
+    {
+      "name": "Justin Unterreiner",
+      "email": "justin.unterreiner@gmail.com",
+      "url": "https://github.com/Justin-Credible"
+    },
+    {
+      "name": "Eric McNiece",
+      "email": "emcniece@gmail.com",
+      "url": "https://github.com/emcniece"
+    }
+  ],
+  "cordova": {
+    "id": "cordova-fabric-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "opencollective": "^1.0.3"
+  },
+  "description": "Cordova Fabric.io Plugin",
+  "devDependencies": {
+    "babel": "^5.8.35"
+  },
+  "directories": {},
+  "dist": {
+    "fileCount": 45,
+    "integrity": "sha512-KngBYyya54DDXh53d3DKLlXIZxZTe3vbccEn97PaoMTr2ETPG6/2aHjNtKMmUuB3o/xeOO7YHH1qjgKK5Elb9w==",
+    "shasum": "be481c2d81269c05300b130d496fe4f1e10f7faf",
+    "tarball": "https://registry.npmjs.org/cordova-fabric-plugin/-/cordova-fabric-plugin-1.1.14-dev.tgz",
+    "unpackedSize": 21176933
+  },
+  "gitHead": "9363a290e071ccd262da9d718aaf5a10a284e144",
+  "homepage": "https://github.com/sarriaroman/FabricPlugin#readme",
+  "keywords": [
+    "answers",
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "crashlytics",
+    "device",
+    "ecosystem:cordova",
+    "events",
+    "fabric"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "sarriaroman",
+      "email": "agustin478@gmail.com"
+    }
+  ],
+  "name": "cordova-fabric-plugin",
+  "optionalDependencies": {},
+  "packages": {
+    "crashlytics": "3.9.3",
+    "fabric": "1.7.2"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarriaroman/FabricPlugin.git"
+  },
+  "scripts": {
+    "add-packages": "./scripts/add-packages.sh",
+    "postinstall": "opencollective postinstall",
+    "transpile": "babel www/*.es6 --out-dir ."
+  },
+  "version": "1.1.14-dev"
+}
