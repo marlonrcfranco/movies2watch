@@ -13,5 +13,11 @@ $ npm i ionic-storage
 
 3. Run `ionic serve` to open the app on the browser.
 
+If you get the error: `node_modules/rxjs/internal/symbol/observable.d.ts(4,9): error TS2687: All declarations of 'observable' must have identical modifiers.
+`, run the command:
+```
+npm install @types/node@10.1.4
+```
+
 ****
 Based on the project of okode (https://github.com/okode/movies-app.git)
