@@ -7,8 +7,10 @@ Project of the discipline of Advanced Topics in Internet Systems of the Universi
 
 ```
 $ npm install
-$ npm i ionic-angular
-$ npm i ionic-storage
+$ npm install
+$ npm run fetch-plugins
+
+$ ionic build
 ```
 
 3. Run `ionic serve` to open the app on the browser.
