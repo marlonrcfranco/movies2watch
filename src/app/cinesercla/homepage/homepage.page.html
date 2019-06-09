@@ -1,0 +1,45 @@
+<ion-header class="header">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="md-arrow-back" class="icon" (click)="pop()"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-img src="../../../assets/logo.png" class="logo"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ios-home" class="icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <!-- Logo -->
+  <div class="container">
+    <div class="mt-5">
+      <div class="ion-text-center display-4" style="font-size: 48px; color:black"> Escolha uma Opção</div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <ion-card class=" card bg-gradient1">
+          <ion-card-header>
+            <ion-card-title class="cinemafont">
+              <div class="ion-text-center" (click)="goToLocalizacao()"> Ver localização no mapa </div>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+      <div class="col-sm">
+        <ion-card class="card bg-gradient2" (click)="goEmCartazPage()">
+          <ion-card-header>
+            <ion-card-title class="cinemafont">
+              <div class="ion-text-center"> Ver Filmes em Cartaz </div>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

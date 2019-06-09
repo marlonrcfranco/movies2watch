@@ -1,0 +1,121 @@
+<ion-header class="header">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="md-arrow-back" class="icon" (click)="pop()"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-img src="../../../assets/logo.png" class="logo"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ios-home" class="icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div #map id="map"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="cardMap mt-2">
+          <ion-card class="card1">
+            <ion-card-header>
+              <ion-card-title class="text-primary">Cinesystem Cinemas</ion-card-title>
+              <ion-card-subtitle class="subtitulo">Praça Shopping Rio Grande</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content class="content1">
+              <div class="row">
+                <div class="col">
+                  <span class="endereco"><i class="fas fa-map-marker-alt" style="color: white"></i> &nbsp;Rua: R. Jockey
+                    Clube, 155. Vila
+                    Prado -
+                    Rio Grande/RS </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <span class="endereco"><i class="fas fa-phone" style="color: white"></i> &nbsp;Telefone: (53)
+                    3232-4923</span>
+                </div>
+              </div>
+              <div class="row">
+                <ion-chip color="secondary" style="background: white">
+                  <ion-label style="color:black" (click)="goEmCartazCinesystem()">Acessar filmes em cartaz &nbsp;<i
+                      class="fas fa-sign-in-alt"></i>
+                  </ion-label>
+                </ion-chip>
+                &nbsp;
+              </div>
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="card2">
+            <ion-card-header>
+              <ion-card-title class="text-primary">Cinesercla Cinemas</ion-card-title>
+              <ion-card-subtitle class="subtitulo">Partage Shopping Rio Grande</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content class="content2">
+              <div class="row">
+                <div class="col">
+                  <span class="endereco"><i class="fas fa-map-marker-alt" style="color: white"></i>&nbsp; Rua: Avenida
+                    Engenheira Lúcia Maria Balbela Chiesa, 2986. Loja 203 -
+                    Rio Grande/RS </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <span class="endereco"><i class="fas fa-phone" style="color: white"></i>&nbsp; Telefone: (53)
+                    3232-4923</span>
+                </div>
+              </div>
+              <div class="row">
+                <ion-chip color="secondary" style="background: white">
+                  <ion-label style="color:black" (click)="goEmCartazCinesercla()">Acessar filmes em cartaz &nbsp;<i
+                      class="fas fa-sign-in-alt"></i>
+                  </ion-label>
+                </ion-chip>
+                &nbsp;
+              </div>
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="card3">
+            <ion-card-header>
+              <ion-card-title class="text-primary">Cine Dunas</ion-card-title>
+              <ion-card-subtitle class="subtitulo">Praça Shopping Rio Grande</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content class="content3">
+              <div class="row">
+                <div class="col">
+                  <span class="endereco"><i class="fas fa-map-marker-alt" style="color: white"></i> &nbsp; Rua: Av. Rio
+                    Grande,
+                    451. Cassino - Rio Grande/RS </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <span class="endereco"><i class="fas fa-phone" style="color: white"></i> &nbsp;Telefone: (53)
+                    3236-8119</span>
+                </div>
+              </div>
+              <div class="row">
+                <ion-chip color="secondary" style="background: white">
+                  <ion-label style="color:black" (click)="goEmCartazDunas()">Acessar filmes em cartaz &nbsp;<i
+                      class="fas fa-sign-in-alt"></i>
+                  </ion-label>
+                </ion-chip>
+                &nbsp;
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
