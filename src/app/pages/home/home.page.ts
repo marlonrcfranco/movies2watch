@@ -2,9 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TmdbService } from '../../services/tmdb.service';
 import { Movie } from '../../models/movie';
-import { LoadingController, Content } from '@ionic/angular';
+import { LoadingController, Content, PopoverController } from '@ionic/angular';
 import { Cinema } from '../../models/cinema';
 import { CinemaService } from '../../services/cinema-service';
+
 
 @Component({
   selector: 'app-page-home',
@@ -24,7 +25,7 @@ export class HomePage implements OnInit {
     private router: Router,
     private loadingCtrl: LoadingController,
     private tmdb: TmdbService,
-    public cinemaService: CinemaService
+    public cinemaService: CinemaService,
   ) 
   { }
 
@@ -48,6 +49,14 @@ export class HomePage implements OnInit {
     this.loadMovies();
   }
 
+  trataGenero(segmentValue: any) {
+    this.segment = segmentValue.detail.value;
+    this.page = 1;
+    this.movies = null;
+    this.content.scrollToTop();
+    this.loadMovies();
+  }
+
   onNextPage() {
     this.page++;
     this.loadMovies();
@@ -63,10 +72,17 @@ export class HomePage implements OnInit {
 
   private async loadMovies() {
     let service;
+    console.log('segment: ')
+    console.log(this.segment)
     switch (this.segment) {
-      case 'popular':  service = this.tmdb.getPopularMovies(this.page); break;
-      case 'top':      service = this.tmdb.getTopMovies(this.page); break;
-      case 'upcoming': service = this.tmdb.getUpcomingMovies(this.page); break;
+      case 'upcoming': service = this.tmdb.getUpcomingMovies(this.page); console.log('upcoming'); break;
+      case 'acao': service = this.tmdb.getActionMovies(this.page); console.log('acao'); break;
+      case 'aventura': service = this.tmdb.getAdventureMovies(this.page); console.log('aventura'); break;
+      case 'romance': service = this.tmdb.getRomanceMovies(this.page); console.log('romance'); break;
+      case 'suspense': service = this.tmdb.getThrillerMovies(this.page); console.log('suspense'); break;
+      case 'terror': service = this.tmdb.getTerrorMovies(this.page); console.log('terror'); break;
+      case 'musical': service = this.tmdb.getMusicMovies(this.page); console.log('musical'); break;
+      case 'animacao': service = this.tmdb.getAnimationMovies(this.page); console.log('animacao'); break;
     }
     const loadingOpts = { translucent: true, spinner: 'crescent', content: 'Carregando' };
     const loading = await this.loadingCtrl.create(loadingOpts);

@@ -80,7 +80,8 @@ export class TmdbService {
 
 
   dicoverMovie(page: any, genre: any) {
-    return this.http.get(`${this.baseUrl}/discover/movie?${this.getParams({ page: page, with_genres: genre })}`)
+    console.log(this.baseUrl + '/discover/movie'+this.getParams({ page: page, with_genres: genre }))
+    return this.http.get(`${this.baseUrl}/discover/movie${this.getParams({ page: page, with_genres: genre })}`)
       .pipe(map((res: any) => <Movie[]>res.results))
       .pipe(delay(500));
   }

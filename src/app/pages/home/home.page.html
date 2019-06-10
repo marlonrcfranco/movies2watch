@@ -40,10 +40,32 @@
         </div>
       </ion-card-content>
     </ion-card>
+    
+    <ion-list>
+      <!-- <ion-list-header>Gêneros</ion-list-header> -->
+      <ion-item>
+        <ion-label>Gênero</ion-label>
+        <ion-select (ionChange)="trataGenero($event)" value="upcoming" okText="Ok" cancelText="Voltar">
+          <ion-select-option value="upcoming">Lançamentos</ion-select-option>
+          <ion-select-option value="acao">Ação</ion-select-option>
+          <ion-select-option value="aventura">Aventura</ion-select-option>
+          <ion-select-option value="romance">Romance</ion-select-option>
+          <ion-select-option value="suspense">Suspense</ion-select-option>
+          <ion-select-option value="terror">Terror</ion-select-option>
+          <ion-select-option value="musical">Musical</ion-select-option>
+          <ion-select-option value="animacao">Animação</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
 
-  <h1 *ngIf="movies && segment == 'popular'">Populares</h1>
-  <h1 *ngIf="movies && segment == 'top'">Top</h1>
   <h1 *ngIf="movies && segment == 'upcoming'">Lançamentos</h1>
+  <h1 *ngIf="movies && segment == 'acao'">Ação</h1>
+  <h1 *ngIf="movies && segment == 'aventura'">Aventura</h1>
+  <h1 *ngIf="movies && segment == 'romance'">Romance</h1>
+  <h1 *ngIf="movies && segment == 'suspense'">Suspense</h1>
+  <h1 *ngIf="movies && segment == 'terror'">Terror</h1>
+  <h1 *ngIf="movies && segment == 'musical'">Musical</h1>
+  <h1 *ngIf="movies && segment == 'animacao'">Animação</h1>
 
   <div class="movies-flex" *ngIf="movies">
     <div class="movie" *ngFor="let movie of movies" (click)="onMovieDetail(movie.id)">
@@ -65,50 +87,21 @@
 
 </ion-content>
 
-<ion-footer>
+<!-- <ion-footer>
   <ion-toolbar>
     <div class="tabs">
-      <div class="tab" [ngClass]="{ 'active' : segment == 'popular' }" (click)="onTabSelected('popular')">
-        <ion-icon name="flame"></ion-icon>
-        <div class="label">Populares</div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'home' }" (click)="goHome()">
+        <ion-icon name="home"></ion-icon>
+        <div class="label">Home</div>
       </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'top' }" (click)="onTabSelected('top')">
+      <div class="tab" [ngClass]="{ 'active' : segment == 'generos' }" (click)="onTabSelected('generos')">
         <ion-icon name="star"></ion-icon>
-        <div class="label">Top</div>
+        <div class="label">Gêneros</div>
       </div>
       <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
         <ion-icon name="calendar"></ion-icon>
         <div class="label">Lançamentos</div>
-      </div>
-
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-        <ion-icon name="calendar"></ion-icon>
-        <div class="label">Lançamentos</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-          <ion-icon name="calendar"></ion-icon>
-          <div class="label">Lançamentos</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-          <ion-icon name="calendar"></ion-icon>
-          <div class="label">Lançamentos</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-          <ion-icon name="calendar"></ion-icon>
-          <div class="label">Lançamentos</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-          <ion-icon name="calendar"></ion-icon>
-          <div class="label">Lançamentos</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-          <ion-icon name="calendar"></ion-icon>
-          <div class="label">Lançamentos</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
-          <ion-icon name="calendar"></ion-icon>
-          <div class="label">Lançamentos</div>
       </div>
     </div>
   </ion-toolbar>
-</ion-footer>
+</ion-footer> -->
