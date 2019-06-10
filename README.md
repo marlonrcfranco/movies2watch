@@ -1,5 +1,5 @@
 # movies2watch
-Project of the discipline of Advanced Topics in Internet Systems of the Universidade Federal do Rio Grande - FURG
+Project for the course of Advanced Topics in Internet Systems of the Universidade Federal do Rio Grande - FURG
 
 ![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_310.png)
 ![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_317.png)
