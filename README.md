@@ -1,6 +1,16 @@
 # movies2watch
 Project of the discipline of Advanced Topics in Internet Systems of the Universidade Federal do Rio Grande - FURG
 
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_310.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_317.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_318.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_319.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_321.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_322.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_323.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_324.png)
+![alt text](https://raw.githubusercontent.com/marlonrcfranco/movies2watch/master/doc/Selection_311.png)
+
 ## How to run
 1. Clone the Project
 2. In the project directory, run the following commands:
