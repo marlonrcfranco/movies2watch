@@ -1,0 +1,73 @@
+#map {
+  height: 500px;
+  // overflow: initial !important;
+}
+
+.cardMap {
+  margin-top: -7px;
+}
+
+// google
+.google-map {
+  height: 160px;
+  pointer-events: none;
+  margin: 0 -20px;
+}
+
+.card0 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+  border: 0;
+  margin-bottom: 30px;
+  background: linear-gradient(87deg, #808183 0, rgb(54, 54, 54) 100%) !important;
+}
+
+// #e65c00 #f9d423
+// #8360c3 #2ebf91
+.card-header {
+  text-align: right;
+}
+
+.text-primary {
+  color: rgb(10, 10, 10) !important;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgba(189, 187, 187, 0.7);
+  text-align: left;
+}
+
+.subtitulo {
+  color: #f5f4f4 !important;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+.endereco {
+  color: #fff !important;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+.logo {
+  height: 66px;
+  width: 291px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+// .header {
+//   background: black;
+// }
+
+// .icon {
+//   color: white;
+
+// }

@@ -1,16 +1,45 @@
 <ion-header>
   <ion-toolbar>
     <ion-title></ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="onSearch()">
         <ion-icon name="search"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-img src="../../../assets/logo.png" class="logo" (click)="goHome()"></ion-img>
+    <!-- <ion-img src="../../../assets/icon.png" class="logo" (click)="goHome()"></ion-img> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-card *ngIf="cinema">
+      <ion-card-header>
+        <ion-card-title class="text-primary">{{cinema.nome }}</ion-card-title>
+        <ion-card-subtitle class="subtitulo">{{cinema.loc }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="content1">
+        <div class="row">
+          <div class="col">
+            <span class="endereco"><i class="fas fa-map-marker-alt" style="color: white"></i>{{cinema.end }} </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span class="endereco"><i class="fas fa-phone" style="color: white"></i>{{cinema.tel }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <ion-chip color="secondary" style="background: white">
+            <!-- <ion-label style="color:black" (click)="goEmCartazCinesystem()">Acessar filmes em cartaz &nbsp;<i class="fas fa-sign-in-alt"></i> -->
+            <ion-label style="color:black">Inteira: {{cinema.inteira }} | Meia-Entrada: {{cinema.meia }}<i class="fas fa-sign-in-alt"></i>
+            </ion-label>
+          </ion-chip>
+        </div>
+      </ion-card-content>
+    </ion-card>
 
   <h1 *ngIf="movies && segment == 'popular'">Populares</h1>
   <h1 *ngIf="movies && segment == 'top'">Top</h1>
@@ -50,6 +79,35 @@
       <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
         <ion-icon name="calendar"></ion-icon>
         <div class="label">Lançamentos</div>
+      </div>
+
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+        <ion-icon name="calendar"></ion-icon>
+        <div class="label">Lançamentos</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+          <ion-icon name="calendar"></ion-icon>
+          <div class="label">Lançamentos</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+          <ion-icon name="calendar"></ion-icon>
+          <div class="label">Lançamentos</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+          <ion-icon name="calendar"></ion-icon>
+          <div class="label">Lançamentos</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+          <ion-icon name="calendar"></ion-icon>
+          <div class="label">Lançamentos</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+          <ion-icon name="calendar"></ion-icon>
+          <div class="label">Lançamentos</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment == 'upcoming' }" (click)="onTabSelected('upcoming')">
+          <ion-icon name="calendar"></ion-icon>
+          <div class="label">Lançamentos</div>
       </div>
     </div>
   </ion-toolbar>

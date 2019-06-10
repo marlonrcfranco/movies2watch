@@ -21,6 +21,17 @@ export class TmdbService {
     private http: HttpClient
   ) {}
 
+  private getParams(params?: any) {
+    const obj = { ...this.params, ...params };
+    const str = [];
+    for (const p in obj) {
+      if (obj.hasOwnProperty(p)) {
+        str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
+      }
+    }
+    return '?' + str.join('&');
+  }
+
   getPopularMovies(page: number) {
     return this.http.get(`${this.baseUrl}/movie/popular${this.getParams({ page: page })}`)
       .pipe(map((res: any) => <Movie[]>res.results))
@@ -67,15 +78,88 @@ export class TmdbService {
     return this.http.get<Person>(`${this.baseUrl}/person/${id}${this.getParams()}${append}`);
   }
 
-  private getParams(params?: any) {
-    const obj = { ...this.params, ...params };
-    const str = [];
-    for (const p in obj) {
-      if (obj.hasOwnProperty(p)) {
-        str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
-      }
-    }
-    return '?' + str.join('&');
+
+  dicoverMovie(page: any, genre: any) {
+    return this.http.get(`${this.baseUrl}/discover/movie?${this.getParams({ page: page, with_genres: genre })}`)
+      .pipe(map((res: any) => <Movie[]>res.results))
+      .pipe(delay(500));
   }
+
+  getActionMovies(page: any) {
+    return this.dicoverMovie(page,'28');
+  }
+
+  getAdventureMovies(page: any) {
+    return this.dicoverMovie(page,'12');
+  }
+
+  getAnimationMovies(page: any) {
+    return this.dicoverMovie(page,'16');
+  }
+
+  getComediaMovies(page: any) {
+    return this.dicoverMovie(page,'35');
+  }
+
+  getCrimeMovies(page: any) {
+    return this.dicoverMovie(page,'80');
+  }
+
+  getDocMovies(page: any) {
+    return this.dicoverMovie(page,'99');
+  }
+
+  getDramaMovies(page: any) {
+    return this.dicoverMovie(page,'18');
+  }
+
+  getFamilyMovies(page: any) {
+    return this.dicoverMovie(page,'10751');
+  }
+
+  getFantasyMovies(page: any) {
+    return this.dicoverMovie(page,'14');
+  }
+
+  getHistoryMovies(page: any) {
+    return this.dicoverMovie(page,'36');
+  }
+
+  getTerrorMovies(page: any) {
+    return this.dicoverMovie(page,'27');
+  }
+
+  getMusicMovies(page: any) {
+    return this.dicoverMovie(page,'10402');
+  }
+
+  getMisteryMovies(page: any) {
+    return this.dicoverMovie(page,'9648');
+  }
+
+  getRomanceMovies(page: any) {
+    return this.dicoverMovie(page,'10749');
+  }
+
+  getScifiMovies(page: any) {
+    return this.dicoverMovie(page,'878');
+  }
+
+  getTvMovies(page: any) {
+    return this.dicoverMovie(page,'10770');
+  }
+
+  getThrillerMovies(page: any) {
+    return this.dicoverMovie(page,'53');
+  }
+
+  getWarMovies(page: any) {
+    return this.dicoverMovie(page,'10752');
+  }
+
+  getFaroestMovies(page: any) {
+    return this.dicoverMovie(page,'37');
+  }
+  
 
 }

@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { TmdbService } from '../../services/tmdb.service';
 import { Movie } from '../../models/movie';
 import { LoadingController, Content } from '@ionic/angular';
+import { Cinema } from '../../models/cinema';
+import { CinemaService } from '../../services/cinema-service';
 
 @Component({
   selector: 'app-page-home',
@@ -14,16 +16,24 @@ export class HomePage implements OnInit {
   segment: string;
   page: number;
   movies: Movie[];
+  cinema: Cinema;
   @ViewChild(Content) content: Content;
 
   constructor(
+    private activatedRoute: ActivatedRoute,
     private router: Router,
     private loadingCtrl: LoadingController,
-    private tmdb: TmdbService
-  ) {}
+    private tmdb: TmdbService,
+    public cinemaService: CinemaService
+  ) 
+  { }
 
   ngOnInit() {
     this.onTabSelected('upcoming');
+    const movieId = this.activatedRoute.snapshot.params['id'];
+    console.log(movieId);
+    this.cinema = this.cinemaService.getItem(movieId);
+    console.log(this.cinema );
   }
 
   goHome() {
