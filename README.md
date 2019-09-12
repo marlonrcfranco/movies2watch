@@ -1,3 +1,9 @@
+[![GitHub repo size](https://img.shields.io/github/repo-size/marlonrcfranco/movies2watch)](https://github.com/marlonrcfranco/movies2watch)
+[![GitHub top language](https://img.shields.io/github/languages/top/marlonrcfranco/movies2watch)](https://github.com/marlonrcfranco/movies2watch)
+[![GitHub](https://img.shields.io/github/license/marlonrcfranco/movies2watch)](https://github.com/marlonrcfranco/movies2watch/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/marlonrcfranco/movies2watch?style=social)](https://github.com/marlonrcfranco/movies2watch/stargazers)
+
+
 # movies2watch
 Project for the course of Advanced Topics in Internet Systems of the Universidade Federal do Rio Grande - FURG
 
